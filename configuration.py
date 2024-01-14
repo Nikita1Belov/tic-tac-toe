@@ -11,7 +11,7 @@ FONT_COMICS = pygame.font.SysFont('comicsansms', FONT_SIZE)
 FONT_BUTTON = pygame.font.SysFont('arial', FONT_BUTTON_SIZE)
 
 # music
-MUSIC_WAY = "/Users/nikitabelov/Documents_files/IT_и_физ-мат/Python/tic-tac-toe/sources/music.mp3"
+MUSIC_WAY = "sources/music.mp3"
 
 # Ai player
 AI = "AI"
