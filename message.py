@@ -21,12 +21,11 @@ class LMessage(Message):
     """
     Messages after ending of the game
     """
-    def __init__(self, surface, text, color_font, x, y, width, height):
+    def __init__(self, surface, text, color_font, y, width, height):
         super().__init__(surface, text)
         self.surface = surface
         self.text = text
         self.color_font = color_font
-        self.x = x
         self.y = y
         self.width = width
         self.height = height
