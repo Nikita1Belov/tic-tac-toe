@@ -199,9 +199,9 @@ class Window:
         self.cleaner()
 
         result = Statistics.send_count()
-        text_label_result = LMessage(self.surface, self.text_result, WHITE, X_BUTTON, Y_LABEL_1, WIDTH_1, HEIGHT)
+        text_label_result = LMessage(self.surface, self.text_result, WHITE, Y_LABEL_1, WIDTH_1, HEIGHT)
         text_result = f"{Player.Player_1} {result[0]} : {result[1]} {Player.Player_2}"
-        text_label_count = LMessage(self.surface, text_result, WHITE, X_BUTTON, Y_BUTTON_1, WIDTH_1, HEIGHT)
+        text_label_count = LMessage(self.surface, text_result, WHITE, Y_BUTTON_1, WIDTH_1, HEIGHT)
 
         button_new_game = Menu(self.surface, X_BUTTON, Y_BUTTON_2, WIDTH_1, HEIGHT,
                                "play a new game", IMAGE_PATH_BUTTON_BLUE,
@@ -263,7 +263,7 @@ class Window:
         self.cleaner()
 
         title = "Top 10 players"
-        text_label_stat = LMessage(self.surface, title, WHITE, X_BUTTON, Y_LABEL_1, WIDTH_1, HEIGHT)
+        text_label_stat = LMessage(self.surface, title, WHITE, Y_LABEL_1, WIDTH_1, HEIGHT)
         button_all = Menu(self.surface, X-200, Y_BUTTON_1, WIDTH_TOP, HEIGHT,
                           "all", IMAGE_PATH_BUTTON_YELLOW,
                           HOVER_IMAGE_PATH_BUTTON_YELLOW,
@@ -323,7 +323,7 @@ class Window:
         y = 0
 
         title = "Top 10 " + mark + " players"
-        text_label_stat = LMessage(self.surface, title, WHITE, X_BUTTON, Y_LABEL_1, WIDTH_1, HEIGHT)
+        text_label_stat = LMessage(self.surface, title, WHITE, Y_LABEL_1, WIDTH_1, HEIGHT)
         self.object_list.append(text_label_stat)
         data = Statistics.reader(mark)
         if len(data) > 1:
@@ -331,7 +331,7 @@ class Window:
             text_label_stat_title = \
                 key_t + "---" + str(data[key_t][0]) + "---" + str(data[key_t][1]) + "---" + str(data[key_t][2])
             text_label_title = LMessage(self.surface, text_label_stat_title,
-                                        BLACK, X_LABEL_STAT, Y_BUTTON_1 + y, WIDTH_1, HEIGHT)
+                                        BLACK, Y_BUTTON_1 + y, WIDTH_1, HEIGHT)
             self.object_list.append(text_label_title)
             data.pop(key_t)
 
